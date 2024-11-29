@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "title": "Root Schema",
+    "type": "object",
+    "default": {},
+    "required": [
+        "name",
+        "quantity",
+        "unit"
+    ],
+    "properties": {
+        "name": {
+            "title": "The name Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+                "Ingredient Name"
+            ]
+        },
+        "unit": {
+            "title": "The unit Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+                "Cups"
+            ]
+        },
+        "quantity": {
+            "title": "The quantity Schema",
+            "type": "number",
+            "multipleOf": 0.01,
+            "default": 0,
+            "examples": [
+                1.75
+            ]
+        }
+    },
+    "examples": [{
+        "name": "Chicken Stock",
+        "quantity": 2.5,
+        "unit": "cups"
+    }]
+  }
